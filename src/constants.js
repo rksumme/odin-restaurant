@@ -1,4 +1,7 @@
+import { homePage } from "./homepage";
+
 export function constants () {
+    const content = document.getElementById('content');
 
     const navBar = () => {
         let header = document.getElementById('header');
@@ -9,9 +12,26 @@ export function constants () {
         console.log('navBar is being imported');
 
         let buttons = document.querySelectorAll('button');
-        let reserveBtn = Array.from(buttons).find(button =>
-            button.textContent.includes('Reservations')
-        );
+        let buttonsArray = Array.from(buttons);
+
+        let homeBtn = buttonsArray.find(button =>
+            button.textContent.includes('Home'));
+        homeBtn.classList.add('home-button');
+        homeBtn.addEventListener('click', () => {
+            content.innerHTML = '';
+            homePage();
+        })
+
+        let aboutBtn = buttonsArray.find(button =>
+            button.textContent.includes('About'));
+        aboutBtn.classList.add('about-button');
+
+        let menuBtn = buttonsArray.find(button =>
+            button.textContent.includes('Menu'));
+        menuBtn.classList.add('menu-button');
+
+        let reserveBtn = buttonsArray.find(button =>
+            button.textContent.includes('Reservations'));
         reserveBtn.classList.add('reserve-button');
     }
 

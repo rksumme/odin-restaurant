@@ -1,19 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Maiden+Orange&display=swap');
+
+:root {
+    --light: #e8c58d;
+    --neutral: #bc9b7f;
+    --medium: #ca9148;
+    --accent: #8f512c;
+    --dark: #482f20;
+}
+
 html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: var(--dark);
+    font-family: 'Maiden Orange', serif;
 }
 
 body {
-    background-color: rebeccapurple;
+    background-color: var(--light);
 }
 
 header {
     display:grid;
-    grid-template-columns: minmax(300px, 350px) 3fr;
+    grid-template-columns: 350px 3fr;
     grid-template-rows: 1fr;
-    background-color: blue;
-    min-height: 10vh;
+    background-color: var(--accent);
+    min-height: 11vh;
+    font-family: 'Dela Gothic One', serif;
 }
 
 nav {
@@ -23,11 +36,32 @@ nav {
     justify-content: flex-end;
     align-items: center;
     gap: 50px;
+    padding-right: 80px;
 }
 
 nav > button {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
     height: 40%;
+    background-color: var(--accent);
+    color: var(--light);
+    border: none;
+    font-family: 'Maiden Orange', serif;
+}
+
+nav > button:hover {
+    color: var(--medium);
+    cursor: pointer;
+}
+
+.reserve-button {
+    background-color: var(--light);
+    color: var(--dark);
+    border-radius: 4px;
+}
+
+.reserve-button:hover {
+    background-color: var(--medium);
+    color: var(--dark);
 }
 
 .title-name {
@@ -36,8 +70,8 @@ nav > button {
     line-height: 3rem;
     text-wrap: wrap;
     text-indent: -60px;
-    padding-left: 120px;
-    background-color: bisque;
+    padding-left: 90px;
+    background-color: var(--medium);
     align-self: center;
     height: 100%;
 }
@@ -47,33 +81,41 @@ nav > button {
 }
 
 .hero-img {
-    border: 2px solid orangered;
     height: 78vh;
     margin: 50px;
-    background-color: aquamarine;
+    background-image: url(https://bloximages.newyork1.vip.townnews.com/feastmagazine.com/content/tncms/assets/v3/editorial/d/45/d45bce7a-a81a-11e5-9161-5b2fba97d18a/567856c261096.image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .welcome {
-    font-size: 5.5rem;
+    font-size: 6rem;
     text-align: center;
-    border: 2px solid green;
-    background-color: rebeccapurple;
+    background-color: var(--light);
     left: 0;
     bottom: -40px;
     position: absolute;
     height: 25vh;
-    width: 40vw;
+    width: 30vw;
+    min-width: 400px;
     display: grid;
     align-items: center;
     justify-items: center;
+    grid-template-rows: 1fr 1fr;
 }
 
 .welcome-button {
-    width: 50%;
+    width: 60%;
     height: 40%;
     text-align: center;
     align-self: flex-start;
-    font-size: 1.25rem;
+    font-size: 2rem;
+    background-color: var(--accent);
+    color: var(--light);
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-family: 'Maiden Orange', serif;
 }
 
 footer {
@@ -81,8 +123,10 @@ footer {
     left: 0;
     bottom: 0;
     width: 100vw;
-    background-color: aqua;
+    background-color: var(--accent);
     height: 30px;
     text-align: center;
     margin-top: 50px;
+    color: var(--light);
+    line-height: 30px;
 }
