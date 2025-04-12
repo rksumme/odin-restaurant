@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Maiden+Orange&display=swap');
+
+:root {
+    --light: #e8c58d;
+    --neutral: #bc9b7f;
+    --medium: #ca9148;
+    --accent: #8f512c;
+    --dark: #482f20;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--dark);
+    font-family: 'Maiden Orange', serif;
+}
+
+.about-container {
+    height: 78vh;
+    margin: 50px;
+    border: 2px solid blue;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.picture-panel {
+    border: 2px solid brown;
+}

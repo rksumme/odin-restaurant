@@ -1,6 +1,9 @@
+import "./styles-home.css";
+
 export function homePage () {
     console.log("homePage is being imported");
-    let content = document.getElementById('content');
+    
+    const content = document.getElementById('content');
 
     const heroImg = () => {
         let imgDiv = document.createElement('div');

@@ -37,6 +37,7 @@ nav {
     align-items: center;
     gap: 50px;
     padding-right: 80px;
+    text-decoration: none;
 }
 
 nav > button {
@@ -51,6 +52,10 @@ nav > button {
 nav > button:hover {
     color: var(--medium);
     cursor: pointer;
+}
+
+.active {
+    text-decoration: underline;
 }
 
 .reserve-button {
