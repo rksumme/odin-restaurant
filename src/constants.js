@@ -1,9 +1,10 @@
-export function homePage () {
+export function constants () {
 
     const navBar = () => {
         let header = document.getElementById('header');
         let titleName = document.createElement('div');
         titleName.classList.add('title-name');
+        titleName.textContent = 'Savory Spoon';
         header.appendChild(titleName);
         console.log('navBar is being imported');
 
@@ -14,5 +15,16 @@ export function homePage () {
         reserveBtn.classList.add('reserve-button');
     }
 
-    return navBar;
+    const footer = () => {
+        let body = document.querySelector('body');
+
+        let footer = document.createElement('footer');
+        footer.classList.add('footer');
+        footer.textContent = 'Developed by RSW';
+
+        body.appendChild(footer);
+    }
+
+    return  navBar(),
+            footer();
 }

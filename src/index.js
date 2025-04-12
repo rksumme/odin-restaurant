@@ -1,4 +1,8 @@
 import "./styles.css";
-import { homePage } from "./home-page";
+import { constants } from "./constants";
+import { homePage } from "./homepage";
 
-document.addEventListener('DOMContentLoaded', homePage());
+document.addEventListener('DOMContentLoaded', () => {
+    constants();
+    homePage();
+});

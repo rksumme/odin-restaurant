@@ -1,3 +1,88 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: rebeccapurple;
+}
+
+header {
+    display:grid;
+    grid-template-columns: minmax(300px, 350px) 3fr;
+    grid-template-rows: 1fr;
+    background-color: blue;
+    min-height: 10vh;
+}
+
+nav {
+    grid-column: 2 / -1;
+    grid-row: 1 / span 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 50px;
+}
+
+nav > button {
+    font-size: 1.5rem;
+    height: 40%;
+}
+
+.title-name {
+    grid-column: 1 / 2;
+    font-size: 3.7rem;
+    line-height: 3rem;
+    text-wrap: wrap;
+    text-indent: -60px;
+    padding-left: 120px;
+    background-color: bisque;
+    align-self: center;
+    height: 100%;
+}
+
+#content {
+    position: relative;
+}
+
+.hero-img {
+    border: 2px solid orangered;
+    height: 78vh;
+    margin: 50px;
+    background-color: aquamarine;
+}
+
+.welcome {
+    font-size: 5.5rem;
+    text-align: center;
+    border: 2px solid green;
+    background-color: rebeccapurple;
+    left: 0;
+    bottom: -40px;
+    position: absolute;
+    height: 25vh;
+    width: 40vw;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.welcome-button {
+    width: 50%;
+    height: 40%;
+    text-align: center;
+    align-self: flex-start;
+    font-size: 1.25rem;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    background-color: aqua;
+    height: 30px;
+    text-align: center;
+    margin-top: 50px;
 }
