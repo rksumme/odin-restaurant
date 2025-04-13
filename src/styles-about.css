@@ -1,29 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Maiden+Orange&display=swap');
-
-:root {
-    --light: #e8c58d;
-    --neutral: #bc9b7f;
-    --medium: #ca9148;
-    --accent: #8f512c;
-    --dark: #482f20;
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: var(--dark);
-    font-family: 'Maiden Orange', serif;
-}
-
 .about-container {
     height: 78vh;
     margin: 50px;
-    border: 2px solid blue;
     display: grid;
     grid-template-columns: 1fr 2fr;
 }
 
 .picture-panel {
-    border: 2px solid brown;
+    height: 78vh;
+    background-image: url(./assets/about-sidebar.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+.about-section {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1.5fr;
+    height: 85%;
+}
+
+.about-title {
+    font-size: 4.5rem;
+    display: flex;
+    align-items: flex-end;
+    margin-left: 50px;
+}
+
+.about-paragraph {
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    text-indent: 1rem;
+    margin: 0 20px;
+}
+
+.contact-container {
+    font-size: 1.3rem;
+    display: grid;
+    height: 100%;
+    /* margin-bottom: 30px; */
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.contact-line {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+}
+
+.location-icon, .phone-icon, .email-icon {
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.location-text, .phone-text, .email-text {
+    align-self: end;
+}
+
+.location-icon {
+    background-image: url(./assets/map-pin.svg);
+}
+
+.phone-icon {
+    background-image: url(./assets/phone-solid.svg);
+}
+
+.email-icon {
+    background-image: url(./assets/mail-solid.svg);
+}
+
